@@ -8,9 +8,9 @@ package events
 // ce-time			Event generation time, in RFC 3339 format (optional)	2020-12-20T13:37:33.647Z
 
 type CloudEventHeaders struct {
-	ID          string  `header:"ce-id"`
-	Source      string  `header:"ce-source"`
-	SpecVersion string  `header:"ce-specversion"`
-	Type        string  `header:"ce-type"`
-	Time        *string `header:"ce-time,omitempty"` // Optional
+	ID          string `header:"ce-id"`
+	Source      string `header:"ce-source"`
+	SpecVersion string `header:"ce-specversion"`
+	Type        string `header:"ce-type"`
+	Time        string `header:"ce-time,omitempty"` // Optional
 }
