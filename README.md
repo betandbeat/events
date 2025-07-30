@@ -132,6 +132,9 @@ To ensure consistency across our systems (analytics, webhooks, event streams), w
 **Q: How do I test my event?**
 - Write unit tests in the `event/` package or integration tests using the publisher interface.
 
+**Q: Why is this repository public?**
+- Because there's no trade secret in here :)
+
 ---
 
 ## Contributing
