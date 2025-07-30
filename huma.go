@@ -12,5 +12,5 @@ type CloudEventHeaders struct {
 	Source      string `header:"ce-source"`
 	SpecVersion string `header:"ce-specversion"`
 	Type        string `header:"ce-type"`
-	Time        string `header:"ce-time,omitempty"` // Optional
+	Time        string `header:"ce-time"` // Optional
 }
