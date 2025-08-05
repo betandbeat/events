@@ -8,7 +8,6 @@ import (
 	publishing "cloud.google.com/go/eventarc/publishing/apiv1"
 	"cloud.google.com/go/eventarc/publishing/apiv1/publishingpb"
 	"github.com/betandbeat/events/event"
-	"github.com/betandbeat/events/utils"
 	cloudevents "github.com/cloudevents/sdk-go/v2"
 )
 
@@ -39,7 +38,7 @@ func NewEventarc(ctx context.Context, messageBus string, source string) (Publish
 // Publish sends an Event to the configured message bus.
 func (p *Eventarc) Publish(ctx context.Context, event event.Event) error {
 	ev := cloudevents.NewEvent()
-	ev.SetID(utils.NewEventID())
+	ev.SetID(NewEventID())
 	ev.SetSource(p.source)
 	ev.SetType(event.EventType())
 	ev.SetDataContentType("application/json")
